@@ -32,23 +32,23 @@ const AgentInterfaceConcept2 = () => {
       let simulatedOutput = ''
       
       switch (agent.id) {
-        case 'sales-coach':
-          simulatedOutput = '🎯 Live coaching active!\n\n"Ask this next: What specific budget range are you working with?"\n\nObjection detected: Price concern\nSuggested response: "Totally fair. What are you comparing it to?"'
+        case 'accountant-appointment-setter':
+          simulatedOutput = '📅 Appointment Booked!\n\nClient: John Smith\nDate: March 15, 2024\nTime: 2:00 PM\n\nConfirmation email sent with:\n• Tax prep checklist\n• Required documents list\n• Office location & parking info\n\nCalendar updated automatically.'
           break
-        case 'rfp-killer':
-          simulatedOutput = '📄 Proposal Generated\n\nScope: Based on your requirements\nTimeline: 6-8 weeks\nPricing: $X,XXX - $XX,XXX\n\nFull proposal document ready for review.'
+        case 'real-estate-lead-qualifier':
+          simulatedOutput = '🏠 Lead Qualified!\n\nBudget: $400,000 - $500,000\nTimeline: Looking to buy in 2-3 months\nLocation: Downtown area, 3BR preferred\n\nProperty matches found: 5 listings\nViewing scheduled: Saturday 2pm\n\nLead score: 8/10 (High priority)'
           break
-        case 'ceo-voice':
-          simulatedOutput = '🎤 Pitch Versions Generated\n\n10-second: "We help businesses automate workflows"\n30-second: [Sales pitch version]\n60-second: [Investor pitch version]\n\nAll versions ready for playback.'
+        case 'medical-appointment-reminder':
+          simulatedOutput = '🏥 Reminders Sent!\n\nPatient: Sarah Johnson\nAppointment: Friday, March 12 at 10:00 AM\n\n✅ Called 48 hours before (confirmed)\n✅ Text reminder sent 24 hours before\n✅ Final call completed 2 hours before\n\nPatient confirmed - ready for appointment.'
           break
-        case 'angry-customer':
-          simulatedOutput = '😤 Response Script Generated\n\nKey Issue: Billing concern\nCalm Response: "I completely understand your frustration..."\nRetention Offer: 15% discount on next invoice\n\nScript ready for your team.'
+        case 'insurance-claims-processor':
+          simulatedOutput = '🛡️ Claim Processed!\n\nClaim #: CL-2024-001234\nPolicy: Auto Insurance\nIncident: Car accident on March 10\n\n✅ All details collected\n✅ Claim file created\n✅ Confirmation sent to client\n✅ Urgent flag: No (standard processing)\n\nStatus: Under review'
           break
-        case 'workflow-builder':
-          simulatedOutput = '⚙️ Workflow Created\n\n1. Lead qualification script\n2. Call booking automation\n3. Reminder sequence (2x)\n4. Follow-up checklist\n\nWorkflow saved and ready to use.'
+        case 'legal-intake-assistant':
+          simulatedOutput = '⚖️ Client Screened!\n\nCaller: Michael Brown\nCase Type: Workers Compensation\nInjury Date: March 5, 2024\n\n✅ Case fits practice area\n✅ Consultation scheduled: March 18, 2pm\n✅ Intake forms sent\n✅ Case prep materials delivered\n\nQualified lead - high value case'
           break
-        case 'cold-call-opener':
-          simulatedOutput = '📞 Roleplay Complete\n\nYour Score: 7.5/10\n\nStrengths: Clear value proposition\nAreas to improve: Handle objections better\n\nImproved opener: "Hi [Name], I noticed [specific insight]..."'
+        case 'restaurant-reservation-manager':
+          simulatedOutput = '🍽️ Reservation Confirmed!\n\nParty: 4 guests\nDate: Tonight (March 11)\nTime: 7:00 PM\n\n✅ Table available - booked\n✅ Confirmation text sent\n✅ Reminder call scheduled for 5pm\n\nSpecial notes: None\nReservation #: RES-2024-5678'
           break
         default:
           simulatedOutput = 'Agent processing complete. Output ready.'

@@ -40,7 +40,7 @@ const ChatInterfaceConcept2 = () => {
         const thirdMessage = {
           id: 3,
           type: 'ai',
-          text: `To get started, let's select your first AI agent. I'll help you choose one that fits your needs.\n\nWe have 6 powerful agents ready to use:\n• Live sales coach\n• Voice RFP generator\n• CEO pitch maker\n• Customer complaint handler\n• Workflow builder\n• Cold call trainer\n\nClick "Select Your Agent" above to get started!`,
+          text: `To get started, let's select your first AI agent. I'll help you choose one that fits your needs.\n\nWe have 6 powerful agents ready to use:\n• Accountant Appointment Setter\n• Real Estate Lead Qualifier\n• Medical Appointment Reminder\n• Insurance Claims Processor\n• Legal Intake Assistant\n• Restaurant Reservation Manager\n\nClick "Select Your Agent" above to get started!`,
           timestamp: new Date(),
         }
         setMessages(prev => [...prev, thirdMessage])

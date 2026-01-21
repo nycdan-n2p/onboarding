@@ -39,7 +39,7 @@ const AgentSelectionConcept2 = () => {
       isSelected,
       canAddFree,
       requiresPayment,
-      buttonText: isSelected ? 'Open Agent' : canAddFree ? 'Get Free Agent' : 'Add Agent',
+      buttonText: isSelected ? 'Open Agent' : canAddFree ? 'Start Free Trial' : 'Add Agent',
       buttonIcon: isSelected ? <ArrowRight size={16} /> : requiresPayment ? <Lock size={16} /> : <Plus size={16} />
     }
   }
@@ -48,14 +48,14 @@ const AgentSelectionConcept2 = () => {
     <div className="agent-selection-page-concept2">
       <div className="agent-selection-container-concept2">
         <div className="agent-selection-header-concept2">
-          <h1>Select Your AI Agent</h1>
-          <p>Choose your first agent free, or add more with a subscription</p>
-          <div className="agent-count-concept2">
-            {userData.selectedAgents?.length || 0} of {userData.selectedAgents?.length === 0 ? '1' : 'unlimited'} agent{userData.selectedAgents?.length !== 1 ? 's' : ''} selected
-            {userData.selectedAgents?.length > 0 && !userData.hasPaymentMethod && (
-              <span className="payment-required-concept2"> • Payment required for additional agents</span>
-            )}
-          </div>
+          <h1>Choose Your Agent</h1>
+          <p>You're on a 14-day free trial. Try any agent - no credit card required.</p>
+          {userData.trialEndDate && (
+            <div className="trial-badge-concept2">
+              <span>Free Trial • </span>
+              <span>Expires {new Date(userData.trialEndDate).toLocaleDateString()}</span>
+            </div>
+          )}
         </div>
 
         <div className="agent-grid-concept2">

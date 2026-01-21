@@ -17,6 +17,10 @@ const HomePage = () => {
     return activeConcept === 'concept1' ? '/register' : `/concept2/register`
   }
 
+  const getTrialText = () => {
+    return activeConcept === 'concept1' ? 'Get Free Agent' : 'Start Free Trial'
+  }
+
   return (
     <div className="homepage">
       <nav className="homepage-nav">
@@ -42,7 +46,7 @@ const HomePage = () => {
             </select>
           </div>
           <button className="nav-button" onClick={() => navigate(getRegisterPath())}>
-            Get Free Agent
+            {getTrialText()}
           </button>
         </div>
       </nav>
@@ -55,12 +59,13 @@ const HomePage = () => {
             <span className="gradient-text">Ready to Use Right Now</span>
           </h1>
           <p className="hero-description">
-            Choose from 6 powerful precanned agents designed for real business problems. 
-            Get your first agent free with 500 credits. No credit card required to start.
+            {activeConcept === 'concept1' 
+              ? 'Choose from 6 powerful precanned agents designed for real business problems. Get your first agent free with 500 credits. No credit card required to start.'
+              : 'Start your 14-day free trial. Get instant access to all 6 specialized agents. No credit card required. Cancel anytime.'}
           </p>
           <div className="hero-cta">
             <button className="cta-primary" onClick={() => navigate(getRegisterPath())}>
-              Get Your Free Agent
+              {activeConcept === 'concept1' ? 'Get Your Free Agent' : 'Start Free Trial'}
               <ArrowRight size={20} />
             </button>
             <button className="cta-secondary" onClick={() => navigate(getRegisterPath())}>

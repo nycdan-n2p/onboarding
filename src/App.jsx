@@ -10,11 +10,7 @@ import AgentSelection from './pages/AgentSelection'
 import AgentInterface from './pages/AgentInterface'
 import Payment from './pages/Payment'
 // Concept 2 pages
-import RegistrationConcept2 from './pages/concept2/RegistrationConcept2'
-import EmailVerificationConcept2 from './pages/concept2/EmailVerificationConcept2'
-import WorkTypeSelectionConcept2 from './pages/concept2/WorkTypeSelectionConcept2'
-import IntegrationSelectionConcept2 from './pages/concept2/IntegrationSelectionConcept2'
-import ChatInterfaceConcept2 from './pages/concept2/ChatInterfaceConcept2'
+import QualificationConcept2 from './pages/concept2/QualificationConcept2'
 import AgentSelectionConcept2 from './pages/concept2/AgentSelectionConcept2'
 import AgentInterfaceConcept2 from './pages/concept2/AgentInterfaceConcept2'
 import PaymentConcept2 from './pages/concept2/PaymentConcept2'
@@ -38,12 +34,8 @@ function App() {
             <Route path="/agents" element={<AgentSelection />} />
             <Route path="/agent/:agentId" element={<AgentInterface />} />
             <Route path="/payment" element={<Payment />} />
-            {/* Concept 2 routes */}
-            <Route path="/concept2/register" element={<RegistrationConcept2 />} />
-            <Route path="/concept2/verify-email" element={<EmailVerificationConcept2 />} />
-            <Route path="/concept2/work-type" element={<WorkTypeSelectionConcept2 />} />
-            <Route path="/concept2/integrations" element={<IntegrationSelectionConcept2 />} />
-            <Route path="/concept2/chat" element={<ChatInterfaceConcept2 />} />
+            {/* Concept 2 routes - Streamlined free trial flow */}
+            <Route path="/concept2/register" element={<QualificationConcept2 />} />
             <Route path="/concept2/agents" element={<AgentSelectionConcept2 />} />
             <Route path="/concept2/agent/:agentId" element={<AgentInterfaceConcept2 />} />
             <Route path="/concept2/payment" element={<PaymentConcept2 />} />

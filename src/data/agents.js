@@ -1,135 +1,140 @@
 export const agents = [
   {
-    id: 'sales-coach',
-    name: 'Turn this call into a deal',
-    subtitle: 'Live sales coach',
-    icon: '🎯',
-    whatYouDo: 'You press record and talk like you\'re on a real sales call.',
+    id: 'accountant-appointment-setter',
+    name: 'Accountant Appointment Setter',
+    subtitle: 'Schedule tax consultations automatically',
+    icon: '📅',
+    whatYouDo: 'You run an accounting firm and need to book tax consultations with new clients.',
     whatAgentDoes: [
-      'Interrupts only when needed: "Ask this next…"',
-      'Detects objections in real time',
-      'Gives a short next line you can say word-for-word',
-      'Keeps you on track with a goal'
+      'Answers client calls and qualifies them',
+      'Checks your calendar for availability',
+      'Books appointments automatically',
+      'Sends confirmation emails with prep checklist',
+      'Follows up 24 hours before the meeting'
     ],
-    example: 'Prospect: "This is too expensive."\nAgent (in your ear): "Say: Totally fair. What are you comparing it to?"',
-    freePreview: '30 seconds of live coaching.',
+    example: 'Client calls: "I need help with my taxes" → Agent books them for next available slot and sends prep materials.',
+    freePreview: 'Book 5 appointments automatically.',
     trialUnlock: [
-      'full call mode',
-      'objection library',
-      'meeting summary + follow-up email',
-      'CRM notes'
+      'unlimited bookings',
+      'multi-calendar sync',
+      'client intake forms',
+      'payment reminders'
     ],
-    whyItSpreads: 'People want to test it on their next call.'
+    whyItSpreads: 'Every accountant needs this during tax season.'
   },
   {
-    id: 'rfp-killer',
-    name: 'Voice RFP Killer',
-    subtitle: 'Talk → proposal in 2 minutes',
-    icon: '📄',
-    whatYouDo: 'You speak your offer out loud:\n"Client is a 200-person company, they need X, timeline is Y, price range is Z…"',
+    id: 'real-estate-lead-qualifier',
+    name: 'Real Estate Lead Qualifier',
+    subtitle: 'Turn website visitors into qualified buyers',
+    icon: '🏠',
+    whatYouDo: 'You\'re a real estate agent and get leads from your website who may or may not be serious buyers.',
     whatAgentDoes: [
-      'Generates a full proposal',
-      'Creates scope + timeline',
-      'Includes assumptions + exclusions',
-      'Builds pricing table',
-      'Drafts a cover email'
+      'Chats with website visitors in real-time',
+      'Asks qualifying questions (budget, timeline, location)',
+      'Schedules property viewings',
+      'Sends property matches via email',
+      'Follows up until they book a showing'
     ],
-    example: 'Speak your requirements → Get a complete, professional proposal ready to send.',
-    freePreview: 'One-page proposal draft.',
+    example: 'Visitor: "Looking for a 3BR house" → Agent qualifies them, shows matches, and books a viewing.',
+    freePreview: 'Qualify 10 leads automatically.',
     trialUnlock: [
-      'full proposal + branded PDF',
-      'multiple pricing packages',
-      'redline-ready terms'
+      'unlimited lead qualification',
+      'CRM integration',
+      'automated follow-up sequences',
+      'market reports'
     ],
-    whyItSpreads: 'It replaces something people hate doing.'
+    whyItSpreads: 'Agents lose leads when they can\'t respond instantly.'
   },
   {
-    id: 'ceo-voice',
-    name: 'Sound like a CEO',
-    subtitle: 'Voice clarity + rewrite',
-    icon: '🎤',
-    whatYouDo: 'You ramble for 45 seconds about your product.',
+    id: 'medical-appointment-reminder',
+    name: 'Medical Appointment Reminder',
+    subtitle: 'Reduce no-shows for your practice',
+    icon: '🏥',
+    whatYouDo: 'You run a medical practice and lose money when patients don\'t show up for appointments.',
     whatAgentDoes: [
-      'Turns it into a clean pitch',
-      'Gives you 3 versions:',
-      '  • short (10 sec)',
-      '  • sales (30 sec)',
-      '  • investor (60 sec)',
-      'Reads it back to you in a confident voice'
+      'Calls patients 48 hours before appointment',
+      'Confirms or reschedules if needed',
+      'Sends text reminders 24 hours before',
+      'Calls again 2 hours before as final reminder',
+      'Updates your calendar automatically'
     ],
-    example: 'Rambling input → Polished, professional pitch in multiple formats.',
-    freePreview: '10-second pitch + playback.',
+    example: 'Patient booked for Friday → Agent calls Wednesday to confirm, texts Thursday, calls Friday morning.',
+    freePreview: 'Remind 20 appointments automatically.',
     trialUnlock: [
-      'all versions',
-      'persona tuning (enterprise buyer vs SMB)',
-      'landing page copy + deck bullets'
+      'unlimited reminders',
+      'multi-language support',
+      'waitlist management',
+      'no-show reporting'
     ],
-    whyItSpreads: 'People share the before/after.'
+    whyItSpreads: 'Every practice has a no-show problem.'
   },
   {
-    id: 'angry-customer',
-    name: 'Angry customer call handler',
-    subtitle: 'Save the account',
-    icon: '😤',
-    whatYouDo: 'You play a real customer complaint (or speak it).',
+    id: 'insurance-claims-processor',
+    name: 'Insurance Claims Processor',
+    subtitle: 'Handle claims intake 24/7',
+    icon: '🛡️',
+    whatYouDo: 'You\'re an insurance agent and clients file claims at all hours, but you can only process them during business hours.',
     whatAgentDoes: [
-      'Identifies what they really want',
-      'Writes a calm response',
-      'Gives a voice script for your rep',
-      'Suggests a retention offer'
+      'Takes claim information via phone or chat',
+      'Collects all required details (policy number, incident date, description)',
+      'Creates claim file automatically',
+      'Sends confirmation to client',
+      'Alerts you for urgent claims'
     ],
-    example: 'Customer complaint → Professional response script + retention strategy.',
-    freePreview: 'One "save script" + email reply.',
+    example: 'Client: "I had a car accident" → Agent collects all details, creates claim file, and notifies you.',
+    freePreview: 'Process 10 claims automatically.',
     trialUnlock: [
-      'full playbook',
-      'escalation rules',
-      'manager summary'
+      'unlimited claim processing',
+      'document collection',
+      'status updates to clients',
+      'fraud detection flags'
     ],
-    whyItSpreads: 'Every business has this problem weekly.'
+    whyItSpreads: 'Claims don\'t wait for business hours.'
   },
   {
-    id: 'workflow-builder',
-    name: 'Voice-to-Workflow Builder',
-    subtitle: 'Talk and it builds the process',
-    icon: '⚙️',
-    whatYouDo: 'You say:\n"When a lead comes in, qualify them, book a call, send a reminder, and follow up twice."',
+    id: 'legal-intake-assistant',
+    name: 'Legal Intake Assistant',
+    subtitle: 'Screen potential clients for your law firm',
+    icon: '⚖️',
+    whatYouDo: 'You\'re a lawyer and potential clients call, but you need to know if their case is worth your time before scheduling a consultation.',
     whatAgentDoes: [
-      'Turns it into a step-by-step workflow',
-      'Generates call script',
-      'Creates follow-up sequence',
-      'Builds checklist for your team',
-      'Reads back the plan and asks questions'
+      'Answers calls and screens potential clients',
+      'Asks case-specific questions',
+      'Determines if case fits your practice areas',
+      'Schedules consultations for qualified leads',
+      'Sends intake forms and case prep materials'
     ],
-    example: 'Voice description → Complete workflow with scripts, sequences, and checklists.',
-    freePreview: 'Workflow plan + scripts.',
+    example: 'Caller: "I was injured at work" → Agent screens them, confirms it\'s a workers comp case, and books consultation.',
+    freePreview: 'Screen 15 potential clients.',
     trialUnlock: [
-      'save workflows',
-      'templates',
-      'team sharing',
-      'integrations'
+      'unlimited client screening',
+      'conflict of interest checks',
+      'case value estimation',
+      'consultation prep packets'
     ],
-    whyItSpreads: 'It makes you feel productive fast.'
+    whyItSpreads: 'Lawyers waste hours on unqualified leads.'
   },
   {
-    id: 'cold-call-opener',
-    name: 'Cold call opener generator',
-    subtitle: 'Voice roleplay',
-    icon: '📞',
-    whatYouDo: 'You pick an industry and press "Roleplay."',
+    id: 'restaurant-reservation-manager',
+    name: 'Restaurant Reservation Manager',
+    subtitle: 'Handle bookings and waitlists automatically',
+    icon: '🍽️',
+    whatYouDo: 'You run a restaurant and get reservation calls during busy service when your staff can\'t answer the phone.',
     whatAgentDoes: [
-      'Plays the prospect',
-      'Pushes back realistically',
-      'Scores your delivery',
-      'Gives you a better opener',
-      'Gives you a second attempt'
+      'Answers reservation calls 24/7',
+      'Checks table availability in real-time',
+      'Books reservations automatically',
+      'Manages waitlist when fully booked',
+      'Sends confirmation texts and reminder calls'
     ],
-    example: 'Practice your pitch → Get scored and improved with realistic objections.',
-    freePreview: 'One roleplay + score.',
+    example: 'Caller: "Table for 4 tonight at 7pm?" → Agent checks availability, books it, and sends confirmation.',
+    freePreview: 'Book 25 reservations automatically.',
     trialUnlock: [
-      'full training pack',
-      'team leaderboard',
-      'objection drills'
+      'unlimited reservations',
+      'table management system',
+      'no-show prevention',
+      'special occasion notes'
     ],
-    whyItSpreads: 'People challenge coworkers with it.'
+    whyItSpreads: 'Restaurants lose revenue when phones go unanswered.'
   }
 ]

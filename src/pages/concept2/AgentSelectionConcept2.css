@@ -27,23 +27,19 @@
   margin-bottom: 16px;
 }
 
-.agent-count-concept2 {
+.trial-badge-concept2 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 2px solid #a7f3d0;
   border-radius: 12px;
-  color: #1e293b;
+  color: #047857;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.payment-required-concept2 {
-  color: #64748b;
-  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(20, 184, 166, 0.2);
+  margin-top: 16px;
 }
 
 .agent-grid-concept2 {
