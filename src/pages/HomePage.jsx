@@ -1,11 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Palette } from 'lucide-react'
 import { agents } from '../data/agents'
+import { useConcept } from '../context/ConceptContext'
 import './HomePage.css'
 
 const HomePage = () => {
   const navigate = useNavigate()
+  const { activeConcept, switchConcept } = useConcept()
+
+  const handleConceptChange = (concept) => {
+    switchConcept(concept)
+  }
+
+  const getRegisterPath = () => {
+    return activeConcept === 'concept1' ? '/register' : `/concept2/register`
+  }
 
   return (
     <div className="homepage">
@@ -19,9 +29,22 @@ const HomePage = () => {
           <a href="#pricing">Pricing</a>
           <a href="#about">About</a>
         </div>
-        <button className="nav-button" onClick={() => navigate('/register')}>
-          Get Free Agent
-        </button>
+        <div className="nav-right">
+          <div className="concept-selector">
+            <Palette size={16} />
+            <select 
+              value={activeConcept} 
+              onChange={(e) => handleConceptChange(e.target.value)}
+              className="concept-select"
+            >
+              <option value="concept1">Concept 1</option>
+              <option value="concept2">Concept 2</option>
+            </select>
+          </div>
+          <button className="nav-button" onClick={() => navigate(getRegisterPath())}>
+            Get Free Agent
+          </button>
+        </div>
       </nav>
 
       <div className="homepage-hero">
@@ -36,11 +59,11 @@ const HomePage = () => {
             Get your first agent free with 500 credits. No credit card required to start.
           </p>
           <div className="hero-cta">
-            <button className="cta-primary" onClick={() => navigate('/register')}>
+            <button className="cta-primary" onClick={() => navigate(getRegisterPath())}>
               Get Your Free Agent
               <ArrowRight size={20} />
             </button>
-            <button className="cta-secondary" onClick={() => navigate('/register')}>
+            <button className="cta-secondary" onClick={() => navigate(getRegisterPath())}>
               See All Agents
             </button>
           </div>
@@ -81,7 +104,7 @@ const HomePage = () => {
               <div
                 key={agent.id}
                 className="agent-preview-card"
-                onClick={() => navigate('/register')}
+                onClick={() => navigate(getRegisterPath())}
               >
                 <div className="agent-preview-icon">{agent.icon}</div>
                 <div className="agent-preview-content">
@@ -113,7 +136,7 @@ const HomePage = () => {
               <li>Team collaboration and sharing</li>
               <li>Advanced analytics and monitoring</li>
             </ul>
-            <button className="platform-cta" onClick={() => navigate('/register')}>
+            <button className="platform-cta" onClick={() => navigate(getRegisterPath())}>
               Start Building
               <ArrowRight size={20} />
             </button>
