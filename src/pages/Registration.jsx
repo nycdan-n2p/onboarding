@@ -69,8 +69,8 @@ const Registration = () => {
       <div className="registration-container">
         <div className="registration-header">
           <div className="logo-icon">N2P</div>
-          <h1>Start Your Free Trial</h1>
-          <p>Get started with Net2Phone Agent and receive limited trial tokens</p>
+          <h1>Get Your Free Agent</h1>
+          <p>Get started with Net2Phone Agent and receive your first agent free with 500 credits</p>
         </div>
 
         <form className="registration-form" onSubmit={handleSubmit}>
@@ -127,8 +127,12 @@ const Registration = () => {
 
           <div className="trial-info">
             <div className="info-item">
-              <span className="info-label">Trial Tokens:</span>
-              <span className="info-value">10,000 tokens</span>
+              <span className="info-label">Free Agent:</span>
+              <span className="info-value">1 agent included</span>
+            </div>
+            <div className="info-item">
+              <span className="info-label">Trial Credits:</span>
+              <span className="info-value">500 credits</span>
             </div>
             <div className="info-item">
               <span className="info-label">Duration:</span>

@@ -49,6 +49,26 @@
 .chat-header-right {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.select-agent-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  color: #0a0a0a;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+  cursor: pointer;
+}
+
+.select-agent-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 .tokens-info {

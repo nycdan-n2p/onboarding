@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useOnboarding } from '../context/OnboardingContext'
-import { Send, Sparkles } from 'lucide-react'
+import { Send, Sparkles, UserPlus } from 'lucide-react'
 import './ChatInterface.css'
 
 const ChatInterface = () => {
+  const navigate = useNavigate()
   const { userData } = useOnboarding()
   const [messages, setMessages] = useState([])
   const [inputValue, setInputValue] = useState('')
@@ -36,12 +38,12 @@ const ChatInterface = () => {
       setMessages(prev => [...prev, secondMessage])
       setIsTyping(true)
 
-      // Third message with next steps
+      // Third message with next steps - guide to agent selection
       setTimeout(() => {
         const thirdMessage = {
           id: 3,
           type: 'ai',
-          text: `Here are some things you can do next:\n\n• Ask me questions about your connected apps\n• Request summaries of your recent activity\n• Get help with workflows and automation\n• Explore features and capabilities\n\nWhat would you like to start with?`,
+          text: `To get started, let's select your first AI agent. I'll help you choose one that fits your needs.\n\nWe have 6 powerful agents ready to use:\n• Live sales coach\n• Voice RFP generator\n• CEO pitch maker\n• Customer complaint handler\n• Workflow builder\n• Cold call trainer\n\nClick "Select Your Agent" above to get started!`,
           timestamp: new Date(),
         }
         setMessages(prev => [...prev, thirdMessage])
@@ -93,9 +95,16 @@ const ChatInterface = () => {
           </div>
         </div>
         <div className="chat-header-right">
+          <button 
+            className="select-agent-button"
+            onClick={() => navigate('/agents')}
+          >
+            <UserPlus size={16} />
+            Select Your Agent
+          </button>
           <div className="tokens-info">
             <Sparkles size={16} />
-            <span>{userData.tokens?.toLocaleString() || '10,000'} tokens remaining</span>
+            <span>{userData.credits?.toLocaleString() || '500'} credits remaining</span>
           </div>
         </div>
       </div>
