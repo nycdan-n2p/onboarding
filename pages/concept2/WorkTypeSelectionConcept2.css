@@ -1,0 +1,113 @@
+.work-type-page-concept2 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 48px 24px;
+}
+
+.work-type-container-concept2 {
+  width: 100%;
+  max-width: 900px;
+}
+
+.work-type-header-concept2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.work-type-header-concept2 h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.work-type-header-concept2 p {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.work-type-grid-concept2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.work-type-card-concept2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.work-type-card-concept2:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.work-type-card-concept2.selected {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-color: #14b8a6;
+  box-shadow: 0 4px 16px rgba(20, 184, 166, 0.2);
+}
+
+.work-type-card-concept2 svg {
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+.work-type-card-concept2.selected svg {
+  color: #14b8a6;
+}
+
+.work-type-footer-concept2 {
+  display: flex;
+  justify-content: center;
+}
+
+.continue-button-concept2 {
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+}
+
+.continue-button-concept2:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.4);
+}
+
+.continue-button-concept2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .work-type-grid-concept2 {
+    grid-template-columns: 1fr;
+  }
+
+  .work-type-header-concept2 h1 {
+    font-size: 28px;
+  }
+}
