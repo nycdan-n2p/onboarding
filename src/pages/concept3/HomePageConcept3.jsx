@@ -1,18 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, Check, TrendingUp, TrendingDown, Clock, Phone, Calendar, Sparkles, AlertCircle, DollarSign, Users, Zap, Shield, Star, ChevronRight } from 'lucide-react'
+import { ArrowRight, Check, TrendingUp, TrendingDown, Clock, Phone, Calendar, Sparkles, AlertCircle, DollarSign, Users, Zap, Shield, Star, ChevronRight, Brain, Bot, Newspaper } from 'lucide-react'
 import './HomePageConcept3.css'
 
 const HomePageConcept3 = () => {
   const navigate = useNavigate()
   const [isVisible, setIsVisible] = useState(false)
-  const [timeRemaining, setTimeRemaining] = useState('14:00:00')
   const heroRef = useRef(null)
   const featuresRef = useRef(null)
   const stepsRef = useRef(null)
   const problemRef = useRef(null)
   const solutionRef = useRef(null)
   const statsRef = useRef(null)
+  const newsRef = useRef(null)
 
   const features = [
     {
@@ -66,18 +66,29 @@ const HomePageConcept3 = () => {
     { label: 'No-Shows Prevented', value: '127', description: 'Appointments saved per month' }
   ]
 
-  useEffect(() => {
-    // Countdown timer for urgency
-    const interval = setInterval(() => {
-      const now = new Date()
-      const hours = 23 - now.getHours()
-      const minutes = 59 - now.getMinutes()
-      const seconds = 59 - now.getSeconds()
-      setTimeRemaining(`${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`)
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
+  const newsArticles = [
+    {
+      source: 'Healthcare IT News',
+      date: 'March 2024',
+      headline: 'AI Agents Transform Patient Communication in Medical Practices',
+      excerpt: 'Medical practices adopting AI-powered communication agents report 40% reduction in no-shows and significant time savings for administrative staff.',
+      color: '#3b82f6'
+    },
+    {
+      source: 'Forbes Health',
+      date: 'February 2024',
+      headline: 'The Future of Healthcare: AI Agents Handling Routine Patient Interactions',
+      excerpt: 'Leading healthcare providers are leveraging AI agents to automate appointment reminders, freeing staff to focus on patient care.',
+      color: '#8b5cf6'
+    },
+    {
+      source: 'Medical Economics',
+      date: 'January 2024',
+      headline: 'How AI Agents Are Revolutionizing Practice Management',
+      excerpt: 'Practices using AI agents for patient communication see improved efficiency and patient satisfaction scores.',
+      color: '#06b6d4'
+    }
+  ]
 
   useEffect(() => {
     setIsVisible(true)
@@ -102,7 +113,7 @@ const HomePageConcept3 = () => {
       })
     }, observerOptions)
 
-    const elements = [featuresRef.current, stepsRef.current, problemRef.current, solutionRef.current, statsRef.current].filter(Boolean)
+    const elements = [featuresRef.current, stepsRef.current, problemRef.current, solutionRef.current, statsRef.current, newsRef.current].filter(Boolean)
     elements.forEach(el => {
       if (el) {
         observer.observe(el)
@@ -118,16 +129,21 @@ const HomePageConcept3 = () => {
     <div className="homepage-concept3">
       <nav className="nav-concept3">
         <div className="nav-logo-concept3">
-          <div className="logo-icon-concept3">N2P</div>
-          <span>Medical Appointment Reminder</span>
+          <div className="logo-icon-concept3">
+            <Brain size={20} />
+          </div>
+          <div className="logo-text-concept3">
+            <span className="logo-brand-concept3">Net2Phone AI</span>
+            <span className="logo-subtitle-concept3">AI Agent Platform</span>
+          </div>
         </div>
         <div className="nav-links-concept3">
           <a href="#how-it-works">How It Works</a>
           <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#news">AI in Healthcare</a>
         </div>
         <button className="nav-cta-concept3" onClick={() => navigate('/concept3/signup')}>
-          Start Free Trial
+          Try AI Agent Free
         </button>
       </nav>
 
@@ -136,27 +152,27 @@ const HomePageConcept3 = () => {
         <div className="hero-content-wrapper-concept3">
           <div className="hero-content-concept3">
             <div className="hero-badge-concept3">
-              <Sparkles size={14} />
-              <span>Automated Patient Reminders</span>
+              <Bot size={14} />
+              <span>AI Agent by Net2Phone AI</span>
             </div>
             <h1 className="hero-title-concept3">
-              Reduce No-Shows for Your Practice
+              Your AI Agent for <span className="gradient-text-concept3">Medical Appointment Reminders</span>
             </h1>
             <p className="hero-subtitle-concept3">
-              Automated appointment reminders that call, text, and confirm patients automatically. 
+              Powered by Net2Phone AI, this intelligent agent works 24/7 to call, text, and confirm patients automatically. 
               Reduce no-shows by up to 40% and save hours of staff time every week.
             </p>
-          <div className="hero-cta-concept3">
-            <div className="urgency-banner-concept3">
-              <Zap size={14} />
-              <span>Limited Time: Free 14-Day Trial Ends in</span>
-              <div className="countdown-concept3">{timeRemaining}</div>
+            <div className="ai-badge-concept3">
+              <Brain size={16} />
+              <span>Powered by Advanced AI • Natural Language Processing • HIPAA Compliant</span>
             </div>
+          <div className="hero-cta-concept3">
             <button className="cta-primary-concept3" onClick={() => navigate('/concept3/signup')}>
-              Start Free Trial Now
+              <Bot size={18} />
+              Try AI Agent Free
               <ArrowRight size={20} />
             </button>
-            <p className="cta-note-concept3">No credit card required • Cancel anytime • 200+ practices already using it</p>
+            <p className="cta-note-concept3">14-day free trial • No credit card required • Cancel anytime</p>
             <div className="trust-badges-concept3">
               <div className="trust-badge-concept3">
                 <Shield size={14} />
@@ -234,6 +250,10 @@ const HomePageConcept3 = () => {
                 The average medical practice loses <span className="highlight-concept3">$150,000 per year</span> from missed appointments. 
                 Your staff spends <span className="highlight-concept3">12+ hours weekly</span> making reminder calls that patients ignore.
               </p>
+              <div className="ai-solution-preview-concept3">
+                <Bot size={20} />
+                <span>This is where your AI agent steps in</span>
+              </div>
               <div className="problems-grid-concept3">
                 {problems.map((problem, index) => (
                   <div key={index} className="problem-card-concept3" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -275,14 +295,28 @@ const HomePageConcept3 = () => {
         <div className="container-concept3">
           <div className="solution-content-concept3">
             <div className="solution-badge-concept3">
-              <Sparkles size={16} />
-              <span>The Solution</span>
+              <Brain size={16} />
+              <span>Net2Phone AI Agent</span>
             </div>
-            <h2>Stop Losing Revenue to No-Shows</h2>
+            <h2>Your AI Agent Stops Revenue Loss</h2>
             <p className="solution-subtitle-concept3">
-              Our AI agent works 24/7 to call, text, and confirm every patient automatically. 
-              Practices using our system see <strong>40% fewer no-shows</strong> and <strong>15% more revenue</strong> within the first month.
+              Our Net2Phone AI agent works 24/7 to call, text, and confirm every patient automatically. 
+              Practices using our AI agent see <strong>40% fewer no-shows</strong> and <strong>15% more revenue</strong> within the first month.
             </p>
+            <div className="ai-features-highlight-concept3">
+              <div className="ai-feature-item-concept3">
+                <Brain size={20} />
+                <span>Advanced AI Processing</span>
+              </div>
+              <div className="ai-feature-item-concept3">
+                <Bot size={20} />
+                <span>Natural Conversations</span>
+              </div>
+              <div className="ai-feature-item-concept3">
+                <Sparkles size={20} />
+                <span>24/7 Autonomous Operation</span>
+              </div>
+            </div>
             <div className="before-after-concept3">
               <div className="before-after-card-concept3 before">
                 <div className="ba-header-concept3">
@@ -330,11 +364,38 @@ const HomePageConcept3 = () => {
         </div>
       </section>
 
+      <section className="news-section-concept3" id="news" ref={newsRef}>
+        <div className="container-concept3">
+          <div className="section-header-concept3">
+            <Newspaper size={32} />
+            <h2>AI is Transforming Healthcare</h2>
+            <p>See what industry leaders are saying about AI agents in medical practices</p>
+          </div>
+          <div className="news-grid-concept3">
+            {newsArticles.map((article, index) => (
+              <div key={index} className="news-card-concept3" style={{ '--accent-color': article.color }}>
+                <div className="news-header-concept3">
+                  <span className="news-source-concept3">{article.source}</span>
+                  <span className="news-date-concept3">{article.date}</span>
+                </div>
+                <h3 className="news-headline-concept3">{article.headline}</h3>
+                <p className="news-excerpt-concept3">{article.excerpt}</p>
+                <div className="news-footer-concept3">
+                  <span className="news-tag-concept3">AI Agents</span>
+                  <span className="news-tag-concept3">Healthcare</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="features-section-concept3" id="features" ref={featuresRef}>
         <div className="container-concept3">
           <div className="section-header-concept3">
-            <h2>How It Works 24/7</h2>
-            <p>Set it once, and your AI agent handles every reminder automatically</p>
+            <Bot size={32} />
+            <h2>Your AI Agent Works 24/7</h2>
+            <p>Set it once, and your Net2Phone AI agent handles every reminder automatically</p>
           </div>
           <div className="features-grid-concept3">
             {features.map((feature, index) => (
@@ -505,25 +566,26 @@ const HomePageConcept3 = () => {
         <div className="container-concept3">
           <div className="cta-content-concept3">
             <div className="cta-badge-concept3">
-              <Zap size={16} />
-              <span>Limited Spots Available</span>
+              <Brain size={16} />
+              <span>Powered by Net2Phone AI</span>
             </div>
-            <h2>Start Your Free Trial Before It's Too Late</h2>
-            <p>Only <strong>47 spots</strong> remaining this month. Join 200+ practices already reducing no-shows.</p>
+            <h2>Experience the Future of Patient Communication</h2>
+            <p>Join 200+ medical practices using AI agents to automate appointment reminders and reduce no-shows.</p>
             <div className="cta-buttons-concept3">
               <button className="cta-primary-concept3 large" onClick={() => navigate('/concept3/signup')}>
-                Claim Your Free Trial
+                <Bot size={20} />
+                Try AI Agent Free
                 <ArrowRight size={20} />
               </button>
               <button className="cta-outline-concept3" onClick={() => navigate('/concept3/signup')}>
                 See How It Works
               </button>
             </div>
-            <p className="cta-note-concept3">⏰ Free trial ends in {timeRemaining} • No credit card required</p>
+            <p className="cta-note-concept3">14-day free trial • No credit card required • Powered by Net2Phone AI</p>
             <div className="social-proof-concept3">
               <div className="proof-item-concept3">
                 <Users size={16} />
-                <span>200+ practices using it</span>
+                <span>200+ practices using AI agents</span>
               </div>
               <div className="proof-item-concept3">
                 <Star size={16} />
