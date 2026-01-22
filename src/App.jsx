@@ -14,6 +14,10 @@ import QualificationConcept2 from './pages/concept2/QualificationConcept2'
 import AgentSelectionConcept2 from './pages/concept2/AgentSelectionConcept2'
 import AgentInterfaceConcept2 from './pages/concept2/AgentInterfaceConcept2'
 import PaymentConcept2 from './pages/concept2/PaymentConcept2'
+// Concept 3 pages
+import HomePageConcept3 from './pages/concept3/HomePageConcept3'
+import SignupConcept3 from './pages/concept3/SignupConcept3'
+import AgentInterfaceConcept3 from './pages/concept3/AgentInterfaceConcept3'
 import { OnboardingProvider } from './context/OnboardingContext'
 import { ConceptProvider } from './context/ConceptContext'
 import './App.css'
@@ -39,6 +43,10 @@ function App() {
             <Route path="/concept2/agents" element={<AgentSelectionConcept2 />} />
             <Route path="/concept2/agent/:agentId" element={<AgentInterfaceConcept2 />} />
             <Route path="/concept2/payment" element={<PaymentConcept2 />} />
+            {/* Concept 3 routes - Single agent landing page */}
+            <Route path="/concept3" element={<HomePageConcept3 />} />
+            <Route path="/concept3/signup" element={<SignupConcept3 />} />
+            <Route path="/concept3/agent/:agentId" element={<AgentInterfaceConcept3 />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Router>

@@ -14,11 +14,17 @@ const HomePage = () => {
   }
 
   const getRegisterPath = () => {
-    return activeConcept === 'concept1' ? '/register' : `/concept2/register`
+    if (activeConcept === 'concept1') return '/register'
+    if (activeConcept === 'concept2') return '/concept2/register'
+    if (activeConcept === 'concept3') return '/concept3'
+    return '/register'
   }
 
   const getTrialText = () => {
-    return activeConcept === 'concept1' ? 'Get Free Agent' : 'Start Free Trial'
+    if (activeConcept === 'concept1') return 'Get Free Agent'
+    if (activeConcept === 'concept2') return 'Start Free Trial'
+    if (activeConcept === 'concept3') return 'View Landing Page'
+    return 'Get Free Agent'
   }
 
   return (
@@ -43,6 +49,7 @@ const HomePage = () => {
             >
               <option value="concept1">Concept 1</option>
               <option value="concept2">Concept 2</option>
+              <option value="concept3">Concept 3</option>
             </select>
           </div>
           <button className="nav-button" onClick={() => navigate(getRegisterPath())}>
